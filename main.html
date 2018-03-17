@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Головна | Адвокат Олесь Рупінський</title>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+<link rel="shortcut icon" href="Images/icon.png">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $('.mobile_menu').click(function(){
+
+      if ($(".topmenu > li").is(":visible"))
+      {
+        $('.topmenu > li').css('display','none');
+      }
+      else {
+        $('.topmenu > li').css('display','block');
+      }
+
+     /* $('.mobile_menu').click(function(){
+          $('.topmenu').addClass('nav-open').show();
+          if ($("#burgerdiv").is(":visible"))
+          {
+            $('.topmenu').addClass('nav-open').hide();
+            $('#burgerdiv').css('display','none');
+          }
+          else {
+            $('.topmenu').addClass('nav-open').show();
+            $('#burgerdiv').css('display','block');
+            $('#burgerdiv').css('opacity','0.95');
+            $('#burgerdiv').css('background-color','#0E1116');
+          }
+      */    
+      });
+    });
+/*
+var backgrounds  = [
+  'Images/background.jpg',
+  'Images/background12.jpg',
+  'Images/background13.jpg'
+];
+
+(function(window){
+  var n = 1;
+  var name = ['background.jpg', 'background12.jpg', 'background13.jpg'];
+  var $header;
+  function changeImages() {
+    if  ( n === name.length ) {n = 0;}
+      $header.fadeOut(300).promise().done(function(){
+        $header.css('backgroundImage','url(Images/'+name[n]+')');
+        $header.fadeIn(300);
+        n++; 
+      });
+       
+  }
+  window.onload = function()  {
+    $header = jQuery("#header")
+    return interval = setInterval(function(){ changeImages(); }, 6000);
+  };
+})(window);
+*/
+
+  function adjust_textarea(h) {
+    h.style.height = "20px";
+    h.style.height = (h.scrollHeight)+"px";
+  }
+
+</script>
+
+<style type="text/css">
+  
+  body{
+    margin: 0 auto;
+    float: none; 
+    font-size: 24px;
+    font-family: 'Cuprum', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FBFBFB;
+    font-size: 30px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #hat {
+    width: 100%;
+    background-color: #0E1116;
+    background-size: cover;
+    opacity: 0.9;
+    overflow: hidden;
+  }
+
+  #premenu {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    padding-left: 6%;
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+    background-color: rgba(14, 17, 22, 0.9);
+  }
+
+  #fulllogo {
+      text-align: center;
+      margin-left: -13%;
+    }
+/*
+  #menu {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    height: 60px;
+    width: 100%;
+    background-color: #0E1116;
+    overflow: hidden;
+  }
+*/
+
+  nav {background: #0E1116; }
+  nav ul { 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+  }
+  nav ul:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  nav a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: .3s linear;
+  }
+  .topmenu > li {
+    padding: 0 3% 0 3%;
+    float: left;
+    position: relative;
+    border-left: 1px solid black;
+  }
+  .topmenu > li > a:hover {
+    color: #E6D786;
+  }
+  .topmenu > li:first-child {border-left: 0;}
+  .topmenu > li > a {  
+    padding: 20px 30px;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #FBFBFB;
+    letter-spacing: 2px;
+  }
+  .fas {
+    margin-left: -40px;
+  }
+  .submenu a:hover {
+    color: #E6D786;
+  }
+  .topmenu .fa, 
+  .submenu .fa {
+    margin-left: 5px;
+    color: inherit;
+  }
+  .submenu {
+    position: absolute;
+    z-index: 5;
+    min-width: 280px;
+    background: rgb(255, 255, 255);
+    border-top: 1px solid #CBCBCC;
+    border-left: 1px solid #CBCBCC;
+    border-right: 1px solid #CBCBCC;
+    visibility: hidden;
+    opacity: 0; 
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    transition: .3s linear;  
+  }
+  .submenu li {position: relative;}
+  .submenu li a {
+    color: #282828;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-bottom: 1px solid #CBCBCC;
+  }
+  .submenu .submenu {
+    position: absolute;
+    left: 100%;
+    top: -1px;
+    transition: .3s linear;
+  }
+  nav li:hover > .submenu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #header {
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(Images/background.jpg);
+    background-size: cover;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .premenu {
+    display: inline-block;
+    padding-right: 10px;
+  }
+/*
+  .menu {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .menu li {
+    display: inline;
+    text-align: center;
+    padding: 33px 3% 33px 3%;
+    overflow: hidden;
+  }
+
+  .menu li:hover {
+    background-color: #2C2E29;
+    color: #E6D786;
+  }
+*/
+  #postmenu {
+    text-align:  center;
+    margin-top: -150px;
+  }
+
+  #phrase {
+    color: #FBFBFB; 
+    font-family: 'Pacifico', cursive; 
+    font-size: 45px; 
+    text-align: center; 
+    margin-top: 80px;"
+  }
+
+  .orderb {
+    border: 3px solid #D2C37B;
+    color: #FBFBFB;
+    background-color: transparent;
+    width: 300px;
+    height: 70px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .orderb:hover {
+    font-size: 26px;
+    text-align: center;
+    color: #D2C37B;
+    cursor: pointer;
+  }
+
+  #personalInfo {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 1600px;
+    width: 100%;
+    background-color: #FBFBFB;
+    overflow: hidden;
+  }
+
+  #person {
+    opacity: 1;
+    margin-left: 190px;
+    margin-top: 85px;
+    overflow: hidden;
+  }
+
+  #smallerdiv {
+    float: right;
+    width: 50%;
+    margin-top: 55px;
+    margin-right: 170px;
+    overflow: hidden;
+  }
+
+  #biggerdiv {
+    width: 75%;
+    margin-left: 190px;
+    overflow: hidden;
+    overflow: hidden;
+  }
+
+  #services {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 450px;
+    width: 100%;
+    background-color: #EDEDED;
+    overflow: hidden;
+  }
+
+  #servicein {
+    margin-top: 50px;
+    margin-left: 75px;
+  }
+
+  .postser {
+    text-align: center;
+    margin-left: 40%;
+    width: 300px;
+  }
+/*
+  .postser:hover #alls {
+      margin-right: 10px;
+  }
+*/
+  .postser:hover #allsimg {
+      margin-left: 25px;
+  }
+
+  #alls {
+    text-align: center;
+    -webkit-transition: margin-right 0.5s; 
+    transition: margin-right 0.5s;
+  }
+
+  #allsimg {
+    margin-left: 10px;
+    margin-bottom: -4px;
+    -webkit-transition: margin-left 0.5s; 
+    transition: margin-left 0.5s;
+  }
+
+  #contactsForm {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .serces {
+    margin-left: 30px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background: #ccc;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .serces:after {
+    cursor: pointer;
+  }
+
+  .serces:hover {
+    cursor: pointer;
+  }
+
+  .ser-1 {
+      background-image: url(Images/service2.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+      /*vertical-align: middle;*/
+  }
+
+  .ser-2 {
+      background-image: url(Images/service1.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+  }
+
+  .ser-3 {
+      background-image: url(Images/service5.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+  }
+
+  .ser-4 {
+      background-image: url(Images/service4.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+  }
+
+  .ser-5 {
+      background-image: url(Images/service3.png);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+  }
+
+  .ser-1:hover {
+    color: transparent;
+  }
+
+  .ser-2:hover {
+    color: transparent;
+  }
+
+  .ser-3:hover {
+    color: transparent;
+  }
+
+  .ser-4:hover {
+    color: transparent;
+  }
+
+  .ser-5:hover {
+    color: transparent;
+  }
+
+  .ser-1:after{
+     content: '';
+     position: absolute; bottom: 0; left: 0;
+     width: 100%;
+     height: 0;
+     background-color: rgba(211, 196, 123, 0.8);
+     -webkit-transition: 0.3s;
+     transition: 0.3s;
+  }
+
+  .ser-1:hover:after{    
+      height: 100%;
+  }
+
+  .ser-2:after{
+      content: '';
+      position: absolute; top: 100%; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #D3C47B;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+  }
+  .ser-2 p:after{
+      opacity: 1;
+  }
+  .ser-2:hover:after{    
+      top: 0;
+      opacity: 0.8;
+  }
+
+  .ser-3:after{
+      content: '';
+      position: absolute; top: 100%; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #D3C47B;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+  }
+  .ser-3:hover:after{    
+      top: 0;
+      opacity: 0.8;
+  }
+
+  .ser-4:after{
+      content: '';
+      position: absolute; top: 100%; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #D3C47B;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+  }
+  .ser-4:hover:after{    
+      top: 0;
+      opacity: 0.8;
+  }
+
+  .ser-5:after{
+      content: '';
+      position: absolute; top: 100%; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #D3C47B;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+  }
+  .ser-5:hover:after{    
+      top: 0;
+      opacity: 0.8;
+  }
+
+  .sertext {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  #alls {
+    display: inline-block;
+  }
+
+  #contacts {
+    font-weight: bold;
+    margin-top: 70px;
+    margin-left: 200px;
+    line-height: 50px;
+    width: 35%;
+  }
+
+  #location {
+    margin-top: -85px;
+    margin-left: 80px;
+  }
+
+  #phone {
+    margin-top: -85px;
+    margin-left: 80px;
+  }
+
+  #post {
+    margin-top: -88px;
+    margin-left: 80px;
+  }
+
+  #map {
+    margin-top: -280px;
+    width: 50%;
+    float: right;
+    overflow: hidden;
+  }
+
+  #footer {
+    color: #2C2E31;
+    height: 290px;
+    background-color: #0E1116;
+    overflow: hidden;
+  }
+  #copyright {
+    margin-top: 20px;
+    line-height: 7px;
+    text-align: center;
+  }
+
+  #social {
+    margin-left: 71.5%;
+    margin-top: -130px;
+  } 
+  
+  .mobile_menu{
+    display: none;
+  }
+
+
+  @media screen and (max-width: 1350px){
+    .topmenu {
+      margin-left: 5%;
+    }
+
+    .topmenu > li {
+      padding: 0 2% 0 2%;
+    }
+  }
+
+  @media screen and (max-width: 1250px){
+    .topmenu > li {
+      padding: 0 1% 0 1%;
+    }
+  }
+
+  @media screen and (max-width: 1150px){
+    .topmenu {
+      margin-left: 3%;
+    }
+  }
+
+  @media screen and (max-width: 1090px){
+    .topmenu {
+      margin-left: 2%;
+    }
+
+    .topmenu > li {
+      padding: 0 0.5% 0 0.5%;
+    }
+  }
+
+  @media screen and (max-width: 1020px){
+    .topmenu > li {
+      padding: 0 0.2% 0 0.2%;
+    }
+  }
+
+  @media screen and (max-width: 990px){
+    .topmenu > li {
+      padding: 0 0.1% 0 0.1%;
+    }
+  }
+
+  @media screen and (max-width: 980px){
+
+    .mobile_menu{
+        display: block;
+        text-align: center;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        overflow: hidden;
+    }
+
+    .mobile_menu:hover{
+        color: #E6D786;
+    }
+
+    .topmenu > li {
+        position: relative;
+        display: none;
+        border: none;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        background-color: #0E1116;
+    }
+  }
+
+  @media screen and (max-width: 720px){
+    #phrase {
+      margin-top: 35px;
+    }
+
+    .orderb {
+      margin-top: 130px;
+    }
+  }
+
+  @media screen and (max-width: 370px){
+    #phrase {
+      margin-top: 10px;
+    }
+
+    .orderb {
+      margin-top: 110px;
+    }
+
+  }
+
+/*****************************/
+
+  .sendform{
+    z-index: 1000;
+    font-family: 'Open Sans Condensed', arial, sans;
+    width: 500px;
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    display: none;
+  }
+  .sendform h2{
+      background: #4D4D4D;
+      text-transform: uppercase;
+      font-family: 'Open Sans Condensed', sans-serif;
+      color: #797979;
+      font-size: 18px;
+      font-weight: 100;
+      padding: 20px;
+      margin: -30px -30px 30px -30px;
+  }
+  .sendform input[type="text"],
+  .sendform input[type="date"],
+  .sendform input[type="datetime"],
+  .sendform input[type="email"],
+  .sendform input[type="number"],
+  .sendform input[type="search"],
+  .sendform input[type="time"],
+  .sendform input[type="tel"],
+  .sendform input[type="password"],
+  .sendform textarea,
+  .sendform select
+  {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      outline: none;
+      display: block;
+      width: 100%;
+      padding: 7px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      background: transparent;
+      margin-bottom: 10px;
+      font: 16px Arial, Helvetica, sans-serif;
+      height: 45px;
+  }
+  .sendform textarea{
+      resize:none;
+      overflow: hidden;
+  }
+  .sendform input[type="button"],
+  .sendform input[type="submit"]{
+      /*-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+      -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+      box-shadow: inset 0px 1px 0px 0px #45D6D6;*/
+      background-color: #52BF90;
+      border: 1px solid #52BF90;
+      display: inline-block;
+      cursor: pointer;
+      color: #FFFFFF;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 18px;
+      padding: 8px 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+  .sendform input[type="button"]:hover,
+  .sendform input[type="submit"]:hover {
+      /*background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);*/
+      background-color:#419873;
+  }
+
+  #closeform:hover {
+    text-decoration: underline;
+  }
+
+  .sendbut {
+    width: 500px;
+  }
+
+</style>
+
+</head>
+<body>
+
+    <div id="sendform" class="sendform">
+      <h2>Заявка на консультацію</h2><a href="javascript:void(0)" onclick = "document.getElementById('sendform').style.display='none';"><h2 id="closeform" style="float: right; margin-top: -96px;">Закрити</h2></a>
+      <form method="post" action="post.php">
+        <input type="text" name="field1" placeholder="Ваше повне ім'я" />
+        <input type="email" name="field2" placeholder="Ваш Email" />
+        <input type="tel" name="field3" placeholder="Ваш телефон" />
+        <textarea placeholder="Ваше повідомлення.." onkeyup="adjust_textarea(this)"></textarea>
+        <input type="button" class="sendbut" value="Надіслати" />
+      </form>
+    </div>
+
+    <div id="wrapper">
+        <nav>
+          <a href="#" class="mobile_menu">&#9776;</a>
+          <ul class="topmenu">
+            <li><a href="main.html">Головна</a></li>
+            <li><a href="personalData.html">Персональні дані</a></li>
+            <li><a href="services.html">Послуги<span class="fa fa-angle-down"></span></a>
+              <ul class="submenu fas">
+                <li><a href="services.html#fiz">Фізичним особам<span class="fa fa-angle-down"></span></a>
+                  <ul class="submenu">
+                    <li><a href="services.html#one">Перерахунок пенсій</a></li>
+                    <li><a href="services.html#two">Адвокат по кримінальним справам</a></li>
+                    <li><a href="services.html#nine">Представництво у судах</a></li>
+                    <li><a href="services.html#ten">Житлове право</a></li>
+                    <li><a href="services.html#eleven">Трудове право</a></li>
+                    <li><a href="services.html#twelve">Адміністративне право</a></li>
+                    <li><a href="services.html#thirteen">Спадкове право</a></li>
+                    <li><a href="services.html#fourteen">Сімейне право</a></li>
+                    <li><a href="services.html#fifteen">ДТП та оскарження рішення ДАЇ</a></li>
+                  </ul>
+                </li>
+                <li><a href="services.html#yur">Юридичним особам<span class="fa fa-angle-down"></span></a>
+                  <ul class="submenu">
+                    <li><a href="services.html#sixteen">Юридичний супровід компанії</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+          </ul>
+        </nav>
+        <!--<div id="burgerdiv" style="display: none; width: 100%; height: 490px;"></div>-->
+        <div id="allbnmenu">
+        <div id="header" class="header">
+          <div id="notfade">
+            <div id="hat">
+            </div>
+              <div id="premenu">
+                <div id="fulllogo">
+                  <a href="main.html"><img src="Images/Logo123.png" height=200px width=400px></a>
+                </div>
+                <!--<div id="social">
+                  <div class="premenu" id="facebook"><a href="https://www.facebook.com/oles.rupinskiy?pnref=friends.search" target="_blank"><img src="Images/facebook1.png" onmouseover="this.src='Images/facebook2.png'" onmouseout="this.src='Images/facebook1.png'" height=50px></a></div>
+                  <div class="premenu" id="google"><a href="https://plus.google.com/+%D0%9E%D0%BB%D0%B5%D1%81%D1%8C%D0%A0%D1%83%D0%BF%D1%96%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9" target="_blank"><img src="Images/google+1.png" onmouseover="this.src='Images/google+2.png'" onmouseout="this.src='Images/google+1.png'" height=50px></a></div>
+                  <div class="premenu" id="linkedin"><a href="https://uk.linkedin.com/in/%D0%BE%D0%BB%D0%B5%D1%81%D1%8C-%D1%80%D1%83%D0%BF%D1%96%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9-70a40726" target="_blank"><img src="Images/linkedin1.png" onmouseover="this.src='Images/linkedin2.png'" onmouseout="this.src='Images/linkedin1.png'" height=50px></a></div>
+                  </div>-->
+              </div>
+              
+            </div>
+            <p id="phrase">"Захистимо всіх, хто заплатить!"</p>
+            <div id="postmenu">
+               <a class="show-btn" href = "javascript:void(0)" onclick = "document.getElementById('sendform').style.display='block';"><button class="orderb">Замовити послуги</button></a>
+            </div>
+            
+          </div>
+        </div>
+
+        <div id="content">
+          <div id="personalInfo">
+          <div id="inpers">
+            <img src="Images/lawyer.jpg" id="person" width="280px" height="310px">
+              <div id="smallerdiv"><p>Рупінський Олесь Богданович народився 7 лютого 1984 року в 
+                м. Стебник Львівської області в родині службовців. Навчався в  
+                НУ «Львівська політехніка», де отримав спеціальність «Комп’ютерні системи та мережі» 
+                та «Облік і аудит», а також в НУ ім. І. Франка (м. Львів),де отримав спеціальність 
+                «Правознавство». На даний час навчається в аспірантурі Дрогобицького державного 
+                педагогічного університету ім. І. Франка.</p>
+                <p>У 2008-2011рр. О.Б.Рупінський працював начальником відділу, провідним 
+                менеджером-консультантом відділу продажу роздрібних продуктів  відділення „Дрогобицьке” 
+                ПАТ «ВТБ Банк».</p>
+          </div>
+          <div id="biggerdiv"><p>З 2007 року почав за сумісництвом працювати юристом, 
+                заступником керівника в ГО „Асоціація справедливість закону”. 
+                З 2011 року продовжив свою юридичну діяльність в ТзОВ «МіК» та ПП «Експрес зв'язок», 
+                а з лютого 2014 року стає помічником адвоката Гаврилової Н.М. У 2015р. працював  
+                керівником юридичної служби ТзОВ «Краб», а з липня 2015 року проводить власну юридичну 
+                практику.
+                </p>
+                <p>
+                Наявність стажу практичної роботи і диплома про вищу юридичну освіту дозволили 
+                Олесю Богдановичу  у 2015 році успішно скласти кваліфікаційні іспити для отримання 
+                свідоцтва на право заняття адвокатською діяльністю (свідоцтво № 000221 від 01.07.2015 
+                видане Львівською обласною кваліфікаційно-дисциплінарною колегією адвокатури) і 
+                приступити до практики правозахисної діяльності на якісно новому рівні.
+                </p>
+                <p>
+                Адвокат О.Рупінський брав участь в міжнародній науковій конференції 
+                «Krajowej  Izby Radców Prawnych  «Ponad granicami: Polska-Ukraina», 
+                має подяку компанії «ЛІГА:ЗАКОН» за активну експертну участь і особистий вклад 
+                при проектуванні і створенні системи аналізу судових рішень «Verdictum», 
+                має власну наукову статтю «Впровадження елементів дуалістичної моделі управління в 
+                центральних органах державної влади Республіки Польща та перспективи їх імплементації 
+                в Закон України «Про державну службу» під керівництвом проф., доктора наук 
+                Федоренко В.Л. («Державна служба в Україні: досвід, проблеми, перспективи» 
+                Національна академія державного управління при Президентові України, 
+                ISBN 978-617-7320-03-5, УДК 35(477)(06)). Брав участь у практикумах:
+                </p>
+                <ul>
+                  <li>Практикум «ЛІГА:ЗАКОН» - Оскарження результатів податкових перевірок</li>
+                  <li>Практикум «ЛІГА:ЗАКОН» - Податкові спори в адміністративних судах, судова практика</li>
+                  <li>Практикум «Суд людською мовою: говоримо доступно про судові процеси»</li>
+                </ul>
+                <p>
+                Сфера адвокатської практики Олеся Рупінського  дуже різноманітна, але переважно 
+                спрямована на максимально ефективні пропозиції клієнту комплексного вирішення 
+                проблем правової спрямованості, при використанні всього арсеналу правового 
+                інструментарію різної галузевої належності. Це прийоми і методи вирішення корпоративних 
+                конфліктів, кримінально-правові аспекти економічної спрямованості, вирішення трудових 
+                спорів, представництво інтересів в адміністративних, господарських судах та судах 
+                загальної юрисдикції, робота з правоохоронними органами та органами оперативно-розшукової 
+                діяльності в сфері економіки, здійснення GR-акцій, розробка та реалізація схем злиття і 
+                поглинання і захисту від недружнього поглинання, dew-diligence.
+                </p>
+                <p>
+                Сферою захоплення адвоката Олеся Рупінського є подорожі, книги, сучасні 
+                технології та гаджети.
+                </p>
+                <p>Сімейний статус – одружений, має двоє дітей.</p>
+          </div>
+          </div>
+          </div>
+          <div id="services">
+            <h1>Послуги</h1>
+            <div id="servicein">
+              <a href="services.html#twelve"><div class="serces ser-1"><p style="padding: 100px 15px; cursor: default; text-align: left;">Адміністративне право</p></div></a>
+              <a href="services.html#fourteen"><div class="serces ser-2"><p style="padding: 120px 15px; cursor: default; text-align: left;">Сімейне право</p></div></a>
+              <a href="services.html#eleven"><div class="serces ser-3"><p style="padding: 120px 15px; cursor: default; text-align: left;">Трудове право</p></div></a>
+              <a href="services.html#thirteen"><div class="serces ser-4"><p style="padding: 120px 15px; cursor: default; text-align: left;">Спадкове право</p></div></a>
+              <a href="services.html#ten"><div class="serces ser-5"><p style="padding: 120px 15px; cursor: default; text-align: left;">Житлове право</p></div></a>
+            </div>
+            <div class="postser">
+              <a style="color: black;" href="services.html"><h2 id="alls">Всі послуги</h2>
+              <img src="Images/arrow.png" height=30px id="allsimg"></a>
+            </div>
+            
+              
+          </div>
+          <div id="contactsForm">
+            <div id="contacts">
+              <h2 >Контакти</h2>
+              <p><img id="locImg" src="Images/location.png" height=40px><div id="location">м.Дрогобич, вул. Жупна, 4, кв. 10</div></p>
+              <p><img id="phoneImg" src="Images/phone-call.png" height=40px><div id="phone">+38-097-9-000-321</div></p>
+              <p><img id="mailImg" src="Images/mail.png" height=40px><div id="post">rupinskiy@gmail.com</div></p>
+            </div>
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1339.528088252892!2d23.50351125729067!3d49.3513052918607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a4c1e3d463bb9%3A0x20b85b63d00265a!2z0LLRg9C70LjRhtGPINCW0YPQv9C90LAsIDQsINCU0YDQvtCz0L7QsdC40YcsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgODIxMDA!5e0!3m2!1suk!2sua!4v1516473333122" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div id="footer"> 
+          <div id="copyright">
+        <img src="Images/smallLogo123.png" height=160px width=180px>
+        <p>м.Дрогобич, вул. Жупна, 4, кв. 10</p>
+        <p>+38-097-9-000-321</p>
+        <p>© Copyright 2018. Всі права захищені</p>
+          </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

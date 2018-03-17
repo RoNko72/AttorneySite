@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Персональні дані | Адвокат Олесь Рупінський</title>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+<link rel="shortcut icon" href="Images/icon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.mobile_menu').click(function(){
+
+      if ($(".topmenu > li").is(":visible"))
+      {
+        $('.topmenu > li').css('display','none');
+      }
+      else {
+        $('.topmenu > li').css('display','block');
+      } 
+    });
+  });
+</script>
+
+<style type="text/css">
+  
+  body{
+    margin: 0 auto;
+    float: none; 
+    font-size: 24px;
+    font-family: 'Cuprum', sans-serif;
+
+    background-image: url(Images/backgroundElse.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FBFBFB;
+    font-size: 30px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #hat {
+    width: 100%;
+    background-color: #0E1116;
+    background-size: cover;
+    opacity: 0.9;
+    overflow: hidden;
+  }
+
+  #premenu {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    padding-left: 6%;
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+    background-color: #0E1116;
+    opacity: 0.95;
+  }
+
+  #fulllogo {
+      text-align: center;
+      margin-left: -13%;
+    }
+/*
+  #menu {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    height: 60px;
+    width: 100%;
+    background-color: #0E1116;
+    overflow: hidden;
+  }
+*/
+  #header {
+    margin: 0 auto;
+    padding: 0;
+    height: 180px;
+    overflow: hidden;
+    z-index: 3;
+  }
+
+  .premenu {
+    display: inline-block;
+    padding-right: 10px;
+  }
+/*
+  .menu {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .menu li {
+    display: inline;
+    text-align: center;
+    padding: 33px 3% 33px 3%;
+    overflow: hidden;
+  }
+
+  .menu li:hover {
+    background-color: #2C2E29;
+    color: #E6D786;
+  }
+*/
+  
+  nav {background: #0E1116; }
+  nav ul { 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+  }
+  nav ul:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  nav a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: .3s linear;
+  }
+  .topmenu > li {
+    padding: 0 3% 0 3%;
+    float: left;
+    position: relative;
+    border-left: 1px solid black;
+  }
+  .topmenu > li > a:hover {
+    color: #E6D786;
+  }
+  .topmenu > li:first-child {border-left: 0;}
+  .topmenu > li > a {  
+    padding: 20px 30px;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #FBFBFB;
+    letter-spacing: 2px;
+  }
+  .fas {
+    margin-left: -40px;
+  }
+  .submenu a:hover {
+    color: #E6D786;
+  }
+  .topmenu .fa, 
+  .submenu .fa {
+    margin-left: 5px;
+    color: inherit;
+  }
+  .submenu {
+    position: absolute;
+    z-index: 5;
+    min-width: 280px;
+    background: rgb(255, 255, 255);
+    border-top: 1px solid #CBCBCC;
+    border-left: 1px solid #CBCBCC;
+    border-right: 1px solid #CBCBCC;
+    visibility: hidden;
+    opacity: 0; 
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    transition: .3s linear;  
+  }
+  .submenu li {position: relative;}
+  .submenu li a {
+    color: #282828;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-bottom: 1px solid #CBCBCC;
+  }
+  .submenu .submenu {
+    position: absolute;
+    left: 100%;
+    top: -1px;
+    transition: .3s linear;
+  }
+  nav li:hover > .submenu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #postmenu {
+    text-align:  center;
+    overflow: hidden;
+  }
+
+  .orderb {
+    border: 3px solid #D2C37B;
+    color: #FBFBFB;
+    background-color: transparent;
+    width: 300px;
+    height: 70px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .orderb:hover {
+    font-size: 26px;
+    text-align: center;
+    color: #D2C37B;
+    cursor: pointer;
+  }
+
+  #content {
+    overflow: hidden;
+    height: 1050px;
+  }
+
+  #form {
+    margin-top: -1030px;
+    margin-bottom: 40px;
+    margin-left: 6%;
+    padding: 0 auto;
+    width: 88%;
+    height: 1700px;
+    background-color: rgba(255, 255, 255, 1); 
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  #h1k {
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid #0E1116;
+    border-bottom: 2px solid #0E1116;
+  }
+
+    #personalInfo {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 1750px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+  }
+
+  #person {
+    opacity: 1;
+    margin-left: 150px;
+    margin-top: 25px;
+    overflow: hidden;
+  }
+
+  #smallerdiv {
+    float: right;
+    width: 57%;
+    margin-top: 0;
+    margin-right: 80px;
+    overflow: hidden;
+  }
+
+  #biggerdiv {
+    width: 75%;
+    margin-left: 150px;
+    overflow: hidden;
+  }
+
+  #footer {
+    color: #2C2E31;
+    height: 290px;
+    background-color: #0E1116;
+    overflow: hidden;
+  }
+  #copyright {
+    margin-top: 20px;
+    line-height: 7px;
+    text-align: center;
+  }
+
+  .mobile_menu{
+    display: none;
+  }
+
+
+  @media screen and (max-width: 1350px){
+    .topmenu {
+      margin-left: 5%;
+    }
+
+    .topmenu > li {
+      padding: 0 2% 0 2%;
+    }
+  }
+
+  @media screen and (max-width: 1250px){
+    .topmenu > li {
+      padding: 0 1% 0 1%;
+    }
+  }
+
+  @media screen and (max-width: 1150px){
+    .topmenu {
+      margin-left: 3%;
+    }
+  }
+
+  @media screen and (max-width: 1090px){
+    .topmenu {
+      margin-left: 2%;
+    }
+
+    .topmenu > li {
+      padding: 0 0.5% 0 0.5%;
+    }
+  }
+
+  @media screen and (max-width: 1020px){
+    .topmenu > li {
+      padding: 0 0.2% 0 0.2%;
+    }
+  }
+
+  @media screen and (max-width: 990px){
+    .topmenu > li {
+      padding: 0 0.1% 0 0.1%;
+    }
+  }
+
+  @media screen and (max-width: 980px){
+
+    .mobile_menu{
+        display: block;
+        text-align: center;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        overflow: hidden;
+    }
+
+    .mobile_menu:hover{
+        color: #E6D786;
+    }
+
+    .topmenu > li {
+        position: relative;
+        display: none;
+        border: none;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        background-color: #0E1116;
+    }
+  }
+
+  @media screen and (max-width: 720px){
+  }
+
+  @media screen and (max-width: 370px){
+
+  }
+
+</style>
+
+</head>
+<body>
+    <div id="wrapper">
+      <!--<div id="menu">
+          <ul class="menu">
+            <a href="main.html"><li>Головна</li></a>
+            <a href="personalData.html"><li>Персональні дані</li></a>
+            <a href="services.html"><li>Послуги</li></a>
+            <a href="news.html"><li>Новини</li></a>
+            <a href="contacts.html"><li>Контакти</li></a>
+          </ul>
+      </div>-->
+      <nav>
+        <a href="#" class="mobile_menu">&#9776;</a>
+          <ul class="topmenu">
+            <li><a href="main.html">Головна</a></li>
+            <li><a href="personalData.html">Персональні дані</a></li>
+            <li><a href="services.html">Послуги<span class="fa fa-angle-down"></span></a>
+              <ul class="submenu fas">
+                <li><a href="services.html#fiz">Фізичним особам<span class="fa fa-angle-down"></span></a>
+                  <ul class="submenu">
+                    <li><a href="services.html#one">Перерахунок пенсій</a></li>
+                    <li><a href="services.html#two">Адвокат по кримінальним справам</a></li>
+                    <li><a href="services.html#nine">Представництво у судах</a></li>
+                    <li><a href="services.html#ten">Житлове право</a></li>
+                    <li><a href="services.html#eleven">Трудове право</a></li>
+                    <li><a href="services.html#twelve">Адміністративне право</a></li>
+                    <li><a href="services.html#thirteen">Спадкове право</a></li>
+                    <li><a href="services.html#fourteen">Сімейне право</a></li>
+                    <li><a href="services.html#fifteen">ДТП та оскарження рішення ДАЇ</a></li>
+                  </ul>
+                </li>
+                <li><a href="services.html#yur">Юридичним особам<span class="fa fa-angle-down"></span></a>
+                  <ul class="submenu">
+                    <li><a href="services.html#sixteen">Юридичний супровід компанії</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+          </ul>
+        </nav>
+      <div id="allbnmenu">
+        <div id="header" class="header">
+
+          <div id="notfade">
+            <div id="hat">
+            </div>
+              <div id="premenu">
+                <div id="fulllogo">
+                  <a href="main.html"><img src="Images/Logo123.png" height=200px width=400px></a>
+                </div>
+                  <!--<div id="social" style="margin-left: 71.5%; margin-top: -130px;">
+                    <div class="premenu" id="facebook"><a href="https://www.facebook.com/oles.rupinskiy?pnref=friends.search" target="_blank"><img src="Images/facebook1.png" onmouseover="this.src='Images/facebook2.png'" onmouseout="this.src='Images/facebook1.png'" height=50px></a></div>
+                    <div class="premenu" id="google"><a href="https://plus.google.com/+%D0%9E%D0%BB%D0%B5%D1%81%D1%8C%D0%A0%D1%83%D0%BF%D1%96%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9" target="_blank"><img src="Images/google+1.png" onmouseover="this.src='Images/google+2.png'" onmouseout="this.src='Images/google+1.png'" height=50px></a></div>
+                    <div class="premenu" id="linkedin"><a href="https://uk.linkedin.com/in/%D0%BE%D0%BB%D0%B5%D1%81%D1%8C-%D1%80%D1%83%D0%BF%D1%96%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9-70a40726" target="_blank"><img src="Images/linkedin1.png" onmouseover="this.src='Images/linkedin2.png'" onmouseout="this.src='Images/linkedin1.png'" height=50px></a></div>
+                  </div>-->
+              </div>
+              
+            </div>
+            </div>
+            <div id="content">
+            </div>
+        </div>
+
+          <div id="form">
+                <h1 id="h1k">Персональні дані</h1>
+                  <div id="personalInfo">
+                  <div id="inpers">
+                    <img src="Images/lawyer.jpg" id="person" width="250px" height="310px">
+              <div id="smallerdiv"><p>Рупінський Олесь Богданович народився 7 лютого 1984 року в 
+                м. Стебник Львівської області в родині службовців. Навчався в  
+                НУ «Львівська політехніка», де отримав спеціальність «Комп’ютерні системи та мережі» 
+                та «Облік і аудит», а також в НУ ім. І. Франка (м. Львів),де отримав спеціальність 
+                «Правознавство». На даний час навчається в аспірантурі Дрогобицького державного 
+                педагогічного університету ім. І. Франка.</p>
+                <p>У 2008-2011рр. О.Б.Рупінський працював начальником відділу, провідним 
+                менеджером-консультантом відділу продажу роздрібних продуктів  відділення „Дрогобицьке” 
+                ПАТ «ВТБ Банк».</p>
+          </div>
+          <div id="biggerdiv"><p>З 2007 року почав за сумісництвом працювати юристом, 
+                заступником керівника в ГО „Асоціація справедливість закону”. 
+                З 2011 року продовжив свою юридичну діяльність в ТзОВ «МіК» та ПП «Експрес зв'язок», 
+                а з лютого 2014 року стає помічником адвоката Гаврилової Н.М. У 2015р. працював  
+                керівником юридичної служби ТзОВ «Краб», а з липня 2015 року проводить власну юридичну 
+                практику.
+                </p>
+                <p>
+                Наявність стажу практичної роботи і диплома про вищу юридичну освіту дозволили 
+                Олесю Богдановичу  у 2015 році успішно скласти кваліфікаційні іспити для отримання 
+                свідоцтва на право заняття адвокатською діяльністю (свідоцтво № 000221 від 01.07.2015 
+                видане Львівською обласною кваліфікаційно-дисциплінарною колегією адвокатури) і 
+                приступити до практики правозахисної діяльності на якісно новому рівні.
+                </p>
+                <p>
+                Адвокат О.Рупінський брав участь в міжнародній науковій конференції 
+                «Krajowej  Izby Radców Prawnych  «Ponad granicami: Polska-Ukraina», 
+                має подяку компанії «ЛІГА:ЗАКОН» за активну експертну участь і особистий вклад 
+                при проектуванні і створенні системи аналізу судових рішень «Verdictum», 
+                має власну наукову статтю «Впровадження елементів дуалістичної моделі управління в 
+                центральних органах державної влади Республіки Польща та перспективи їх імплементації 
+                в Закон України «Про державну службу» під керівництвом проф., доктора наук 
+                Федоренко В.Л. («Державна служба в Україні: досвід, проблеми, перспективи» 
+                Національна академія державного управління при Президентові України, 
+                ISBN 978-617-7320-03-5, УДК 35(477)(06)). Брав участь у практикумах:
+                </p>
+                <ul>
+                  <li>Практикум «ЛІГА:ЗАКОН» - Оскарження результатів податкових перевірок</li>
+                  <li>Практикум «ЛІГА:ЗАКОН» - Податкові спори в адміністративних судах, судова практика</li>
+                  <li>Практикум «Суд людською мовою: говоримо доступно про судові процеси»</li>
+                </ul>
+                <p>
+                Сфера адвокатської практики Олеся Рупінського  дуже різноманітна, але переважно 
+                спрямована на максимально ефективні пропозиції клієнту комплексного вирішення 
+                проблем правової спрямованості, при використанні всього арсеналу правового 
+                інструментарію різної галузевої належності. Це прийоми і методи вирішення корпоративних 
+                конфліктів, кримінально-правові аспекти економічної спрямованості, вирішення трудових 
+                спорів, представництво інтересів в адміністративних, господарських судах та судах 
+                загальної юрисдикції, робота з правоохоронними органами та органами оперативно-розшукової 
+                діяльності в сфері економіки, здійснення GR-акцій, розробка та реалізація схем злиття і 
+                поглинання і захисту від недружнього поглинання, dew-diligence.
+                </p>
+                <p>
+                Сферою захоплення адвоката Олеся Рупінського є подорожі, книги, сучасні 
+                технології та гаджети.
+                </p>
+                <p>Сімейний статус – одружений, має двоє дітей.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="footer"> 
+          <div id="copyright">
+        <img src="Images/smallLogo123.png" height=160px width=180px>
+        <p>м.Дрогобич, вул. Жупна, 4, кв. 10</p>
+        <p>+38-097-9-000-321</p>
+        <p>© Copyright 2018. Всі права захищені</p>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

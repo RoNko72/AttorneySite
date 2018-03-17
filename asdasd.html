@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Головна | Адвокат Олесь Рупінський</title>
+<link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+<link rel="shortcut icon" href="Images/icon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+script type="text/javascript">
+var image_count = 3;
+var interval = 3000;
+var time_out = 10;
+var i = 0;
+var timeout;
+var opacity = 100;
+
+function change_image() {
+ opacity--;
+ var j = i + 1;
+ var current_image = 'img_' + i;
+ if (i == image_count) j = 1;
+ var next_image = 'img_' + j;
+ document.getElementById(current_image).style.opacity=opacity/100;
+ document.getElementById(current_image).style.filter='alpha(opacity='+opacity+')';
+ document.getElementById(next_image).style.opacity=(100-opacity)/100;
+ document.getElementById(next_image).style.filter='alpha(opacity='+(100-opacity)+')';
+ timeout = setTimeout("change_image()", time_out);
+ if (opacity==1) {
+  opacity = 100;
+  clearTimeout(timeout);
+ }
+}
+
+setInterval (function() {i++; if (i>image_count) i=1; change_image();}, interval);
+
+/*
+var backgrounds  = [
+  'Images/background.jpg',
+  'Images/background12.jpg',
+  'Images/background13.jpg'
+];
+
+(function(window){
+  var n = 1;
+  var name = ['background.jpg', 'background12.jpg', 'background13.jpg'];
+  var $header;
+  function changeImages() {
+    if  ( n === name.length ) {n = 0;}
+      $header.fadeOut(300).promise().done(function(){
+        $header.css('backgroundImage','url(Images/'+name[n]+')');
+        $header.fadeIn(300);
+        n++; 
+      });
+       
+  }
+  window.onload = function()  {
+    $header = jQuery("#aaa")
+    return interval = setInterval(function(){ changeImages(); }, 6000);
+  };
+})(window);
+*/
+</script>
+
+<style type="text/css">
+  
+  body{
+    margin: 0 auto;
+    float: none; 
+    font-size: 24px;
+    font-family: 'Cuprum', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FBFBFB;
+    font-size: 30px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #hat {
+    width: 100%;
+    background-color: #0E1116;
+    background-size: cover;
+    opacity: 0.9;
+    overflow: hidden;
+  }
+
+  #premenu {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    padding-left: 120px; 
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+    background-color: rgba(14, 17, 22, 0.9);
+  }
+
+  #menu {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    height: 60px;/*80*/
+    width: 100%;
+    background-color: #0E1116;
+    overflow: hidden;
+  }
+
+  #header {
+    margin-top: -500px;
+    padding: 0;
+    background-color: transparent;
+    height: 500px;
+    overflow: hidden;
+    z-index: 100;
+  }
+
+  .premenu {
+    display: inline-block;
+    padding: 0 auto;
+  }
+
+  .menu {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .menu li {
+    display: inline;
+    text-align: center;
+    padding: 33px 50px 33px 50px;
+    overflow: hidden;
+  }
+
+  .menu li:hover {
+    background-color: #2C2E29;
+    color: #E6D786;
+  }
+
+  #postmenu {
+    text-align:  center;
+  }
+
+  .orderb {
+    border: 3px solid #D2C37B;
+    color: #FBFBFB;
+    background-color: transparent;
+    width: 300px;
+    height: 70px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .orderb:hover {
+    font-size: 26px;
+    text-align: center;
+    color: #D2C37B;
+    cursor: pointer;
+  }
+
+/*      box-shadow: 10px 10px 5px grey;     */
+  #personalInfo {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 850px;
+    width: 100%;
+    background-color: #FBFBFB;
+    overflow: hidden;
+  }
+
+  #person {
+    opacity: 1;
+    margin-left: 190px;
+    margin-top: 85px;
+    overflow: hidden;
+  }
+
+  #smallerdiv {
+    float: right;
+    width: 50%;
+    margin-top: 55px;
+    margin-right: 170px;
+    overflow: hidden;
+  }
+
+  #biggerdiv {
+    width: 75%;
+    margin-left: 190px;
+    overflow: hidden;
+    overflow: hidden;
+  }
+
+  #services {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 400px;
+    width: 100%;
+    background-color: #EDEDED;
+    overflow: hidden;
+  }
+
+  #servicein {
+    margin-top: 50px;
+    margin-left: 75px;
+  }
+
+  #contactsForm {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .serces {
+    margin-left: 30px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background: #ccc;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .ser-1 {
+      background-image: url(Images/service1.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+      /*vertical-align: middle;*/
+  }
+
+  .ser-2 {
+      background-image: url(Images/service2.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+  }
+
+  .ser-3 {
+      background-image: url(Images/service5.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+  }
+
+  .ser-4 {
+      background-image: url(Images/service4.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+  }
+
+  .ser-5 {
+      background-image: url(Images/service3.jpg);
+      background-size: cover;
+      color: #FBFBFB;
+      font-size: 26px;
+      text-align: center; 
+  }
+
+  .ser-1:hover {
+    color: transparent;
+  }
+
+  .ser-2:hover {
+    color: transparent;
+  }
+
+  .ser-3:hover {
+    color: transparent;
+  }
+
+  .ser-4:hover {
+    color: transparent;
+  }
+
+  .ser-5:hover {
+    color: transparent;
+  }
+
+  .ser-1:after{
+     content: '';
+     position: absolute; bottom: 0; left: 0;
+     width: 100%;
+     height: 0;
+     background-color: rgba(211, 196, 123, 0.8);
+     -webkit-transition: 0.3s;
+     transition: 0.3s;
+  }
+
+  .ser-1:hover:after{    
+      height: 100%;
+      /*color: rgba(211, 196, 123, 0.8);
+      opacity: 0.8;*/
+  }
+
+  .ser-2:after{
+      content: '';
+      position: absolute; top: 100%; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #D3C47B;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+  }
+  .ser-2 p:after{
+      opacity: 1;
+  }
+  .ser-2:hover:after{    
+      top: 0;
+      opacity: 0.8;
+  }
+
+  .ser-3:after{
+      content: '';
+      position: absolute; top: 100%; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #D3C47B;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+  }
+  .ser-3:hover:after{    
+      top: 0;
+      opacity: 0.8;
+  }
+
+  .ser-4:after{
+      content: '';
+      position: absolute; top: 100%; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #D3C47B;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+  }
+  .ser-4:hover:after{    
+      top: 0;
+      opacity: 0.8;
+  }
+
+  .ser-5:after{
+      content: '';
+      position: absolute; top: 100%; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #D3C47B;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+  }
+  .ser-5:hover:after{    
+      top: 0;
+      opacity: 0.8;
+  }
+
+  .sertext {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  #contacts {
+    font-weight: bold;
+    margin-top: 120px;
+    margin-left: 200px;
+    line-height: 50px;
+    width: 35%;
+  }
+
+  #location {
+    margin-top: -85px;
+    margin-left: 80px;
+  }
+
+  #phone {
+    margin-top: -85px;
+    margin-left: 80px;
+  }
+
+  #post {
+    margin-top: -88px;
+    margin-left: 80px;
+  }
+
+  #map {
+    margin-top: -310px;
+    width: 50%;
+    float: right;
+    overflow: hidden;
+  }
+
+  #footer {
+    color: #2C2E31;
+    height: 290px;
+    background-color: #0E1116;
+    overflow: hidden;
+  }
+  #copyright {
+    margin-top: 20px;
+    line-height: 7px;
+    text-align: center;
+  }  
+</style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="menu">
+            <ul class="menu">
+              <a href="#"><li>Головна</li></a>
+              <a href="#"><li>Персональні дані</li></a>
+              <a href="#"><li>Послуги</li></a>
+              <a href="#"><li>Досягнення</li></a>
+              <a href="#"><li>Контакти</li></a>
+            </ul>
+        </div>
+        <!--<img id="bgi" src="Images/background.jpg" width=100% height=500px>
+-->
+        <img src='Images/background.jpg' id="img_1" style="position: absolute;">
+        <img src='Images/background12.jpg' id="img_2" style="opacity: 0; filter: alpha(opacity=0);
+            position: absolute;">
+        <img src='Images/background13.jpg' id="img_3" style="opacity: 0; filter: alpha(opacity=0);
+            position: absolute;">
+
+        <div id="header" class="header">
+
+          <div id="notfade">
+            <div id="hat">
+            </div>
+              <div id="premenu">
+                <a href="main.html"><img src="Images/fullLogo.png" height=200px width=400px></a>
+                <div id="social" style="margin-left: 71.5%; margin-top: -130px;">
+                  <div class="premenu" id="facebook"><a href="https://www.facebook.com/oles.rupinskiy?pnref=friends.search" target="_blank"><img src="Images/facebook1.png" onmouseover="this.src='Images/facebook2.png'" onmouseout="this.src='Images/facebook1.png'" height=50px></a></div>
+                  <div class="premenu" id="google"><a href="https://plus.google.com/+%D0%9E%D0%BB%D0%B5%D1%81%D1%8C%D0%A0%D1%83%D0%BF%D1%96%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9" target="_blank"><img src="Images/google+1.png" onmouseover="this.src='Images/google+2.png'" onmouseout="this.src='Images/google+1.png'" height=50px></a></div>
+                  <div class="premenu" id="linkedin"><a href="https://uk.linkedin.com/in/%D0%BE%D0%BB%D0%B5%D1%81%D1%8C-%D1%80%D1%83%D0%BF%D1%96%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9-70a40726" target="_blank"><img src="Images/linkedin1.png" onmouseover="this.src='Images/linkedin2.png'" onmouseout="this.src='Images/linkedin1.png'" height=50px></a></div>
+                  </div>
+              </div>
+              
+            </div>
+            
+            <div id="postmenu">
+               <button class="orderb">Замовити послуги</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="content">
+          <div id="personalInfo">
+          <div id="inpers">
+            <img src="Images/lawyer.jpg" id="person" width="250px" height="300px">
+              <div id="smallerdiv"><p>Personalized Representation By Our Personal Injury Lawyers
+            We provide aggressive and loyal representation for people who have been 
+            injured because of the negligence and wrongdoing of others. </p>
+            <p>If you have been injured and need help, you can rely on Randall F. Rogers. 
+            To help people through difficult times, we offer highly personalized representation 
+            that is focused on the client’s needs.  Our attorneys work closely with personal 
+            injury clients throughout the duration of their personal injury cases and actively 
+            seek full compensation for medical costs, pain and suffering, lost wages and other 
+            damages.  We work diligently to educate clients about the law, return calls promptly .</p>
+          </div>
+          <div id="biggerdiv"><p>Our attorneys negotiate for the relief clients need and are always prepared to take 
+            a case to trial if necessary to protect a client’s rights and interests.  
+            Our attorneys have extensive personal injury trial experience.
+            Client Pays Nothing Unless We Recover</p>
+            <p>If you have been injured and need help, you can rely on Randall F. Rogers. 
+            To help people through difficult times, we offer highly personalized representation 
+            that is focused on the client’s needs.  Our attorneys work closely with personal 
+            injury clients throughout the duration of their personal injury cases and actively 
+            seek full compensation for medical costs, pain and suffering, lost wages and other 
+            damages.  We work diligently to educate clients about the law, return calls promptly 
+            and keep clients informed about the status of their personal injury case.  </p>
+            <p>If you have been injured and need help, you can rely on Randall F. Rogers. 
+            To help people through difficult times, we offer highly personalized representation 
+            that is focused on the client’s needs.</p>
+          </div>
+          </div>
+          </div>
+          <div id="services">
+            <h2>Послуги</h2>
+            <div id="servicein">
+              <div class="serces ser-1"><p style="padding: 100px 15px; cursor: default; text-align: left;">Юридичний розгляд справи</p></div>
+              <div class="serces ser-2"><p style="padding: 100px 15px; cursor: default; text-align: left;">Оформлення документів</p></div>
+              <div class="serces ser-3"><p style="padding: 100px 15px; cursor: default; text-align: left;">Проведення консультацій</p></div>
+              <div class="serces ser-4"><p style="padding: 100px 15px; cursor: default; text-align: left;">Фінансове право</p></div>
+              <div class="serces ser-5"><p style="padding: 120px 15px; cursor: default; text-align: left;">IT право</p></div>
+            </div>
+          </div>
+          <div id="contactsForm">
+            <div id="contacts">
+              <h2 >Контакти</h2>
+              <p><img id="locImg" src="Images/location.png" height=40px><div id="location">Adress, 1, Drohobych, Lviv Region</div></p>
+              <p><img id="phoneImg" src="Images/phone-call.png" height=40px><div id="phone">+380971111111</div></p>
+              <p><img id="mailImg" src="Images/mail.png" height=40px><div id="post">post@gmail.com</div></p>
+            </div>
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2598.987060214243!2d23.510538315144732!3d49.352393473750546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a4ea1e9aca377%3A0x3f0cfba2185ed9fb!2z0JzQtdC80L7RgNGW0LDQuyDQotGO0YDQvNCwINC90LAg0KHRgtGA0LjQudGB0YzQutGW0LksINCU0YDQvtCz0L7QsdC40YcsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgODIxMDA!5e0!3m2!1suk!2sua!4v1514741721474" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div id="footer"> 
+          <div id="copyright">
+        <img src="Images/smallLogo.png" height=160px>
+        <p>-------Adress-------</p>
+        <p>----Phone number----</p>
+        <p>© Copyright 2017. Всі права захищені</p>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
